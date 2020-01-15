@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15702" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="onlymusic_watch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="3mD-e2-LcM">
+                            <items>
+                                <group width="1" alignment="left" layout="vertical" id="GEo-N0-PMB">
+                                    <items>
+                                        <label alignment="center" text="Artist" id="wfU-DL-EpF"/>
+                                        <label alignment="center" text="Song" id="2Yb-Mx-V0c"/>
+                                    </items>
+                                </group>
+                                <group alignment="center" id="iRd-hl-rJl">
+                                    <items>
+                                        <button width="100" height="100" alignment="left" backgroundImage="Rewind" id="hEm-0g-FJO">
+                                            <variation key="device=watch38mm" height="40" width="40"/>
+                                            <variation key="device=watch42mm" height="44" width="44"/>
+                                        </button>
+                                        <button width="100" height="100" alignment="left" backgroundImage="Play" id="0EV-me-RxM">
+                                            <variation key="device=watch38mm" height="40" width="40"/>
+                                            <variation key="device=watch42mm" height="44" width="44"/>
+                                            <connections>
+                                                <action selector="playButtonTapped" destination="AgC-eL-Hgc" id="1rX-O9-OQ8"/>
+                                            </connections>
+                                        </button>
+                                        <button width="100" height="100" alignment="left" backgroundImage="FastForwards" id="bsq-sV-Dk9">
+                                            <variation key="device=watch38mm" height="40" width="40"/>
+                                            <variation key="device=watch42mm" height="44" width="44"/>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                            <variation key="device=watch38mm" spacing="15"/>
+                            <variation key="device=watch42mm" spacing="24"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="playButton" destination="0EV-me-RxM" id="NI0-Nz-lx5"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="34" y="31"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FastForwards" width="50" height="50"/>
+        <image name="Play" width="48" height="48"/>
+        <image name="Rewind" width="50" height="50"/>
+    </resources>
+</document>
